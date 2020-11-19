@@ -1,0 +1,40 @@
+{
+  "name": "tailwind-additional-classes",
+  "version": "0.1.0",
+  "description": "Library of additional classes to complement the existing ones from Tailwind",
+  "main": "main.js",
+  "scripts": {
+    "build": "rollup -c",
+    "test": "node test/test.js && exit 0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Hanawa02/tailwind-additional-classes"
+  },
+  "keywords": [
+    "tailwind",
+    "ci",
+    "design",
+    "plugin",
+    "styles"
+  ],
+  "files": [
+    "main.js"
+  ],
+  "author": "Laura Melo Solutions",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/core": "^7.11.6",
+    "@babel/plugin-transform-runtime": "^7.11.5",
+    "@babel/preset-env": "^7.11.5",
+    "@rollup/plugin-babel": "^5.2.1",
+    "@rollup/plugin-commonjs": "^15.1.0",
+    "@rollup/plugin-multi-entry": "^4.0.0",
+    "@rollup/plugin-node-resolve": "^9.0.0",
+    "rollup": "^2.28.1"
+  },
+  "dependencies": {
+    "core-js": "^3.6.5",
+    "regenerator-runtime": "^0.13.7"
+  }
+}
