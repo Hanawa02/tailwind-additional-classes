@@ -1,7 +1,7 @@
 const helper = require("../helper");
 
 const createWidths = () => {
-  const widthList = [];
+  const widthList = [{ id: "fit-content", value: "fit-content" }];
 
   for (let index = 1; index <= 100; index++) {
     widthList.push({ id: `${index}vw`, value: `${index}vw` });
