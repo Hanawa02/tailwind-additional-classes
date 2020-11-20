@@ -1,7 +1,7 @@
 const createMargins = () => {
   const marginList = [];
 
-  for (let index = 1; index <= 100; index++) {
+  for (let index = -100; index <= 100; index++) {
     marginList.push({ id: `${index}`, value: `${index * 0.25}rem` });
     marginList.push({ id: `${index}p`, value: `${index}%` });
   }
