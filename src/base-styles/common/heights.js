@@ -8,6 +8,10 @@ const createHeights = () => {
     heightList.push({ id: `${index}`, value: `${index * 0.25}rem` });
   }
 
+  for (let index = 100; index <= 500; index++) {
+    heightList.push({ id: `${index}`, value: `${index * 0.25}rem` });
+  }
+
   let heights = {};
   for (const item of heightList) {
     const heightItem = {
