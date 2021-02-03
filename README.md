@@ -3,21 +3,24 @@
 ## Usage
 
 ### Dependencies
+
 This project depends on the following libraries to be properly used:
+
 - [Tailwind](https://tailwindcss.com/docs/installation)
 
 ### Set Up
 
 - Install the Library with:
-  ``` bash
+
+  ```bash
   npm install tailwind-additional-classes
   ```
 
 - Add the [plugins](https://tailwindcss.com/docs/configuration#plugins) configuration for Tailwind:
 
-``` js
+```js
 // tailwind.config.js
-const styles = require('tailwind-additional-classes');
+const styles = require("tailwind-additional-classes");
 
 module.exports = {
   future: {},
@@ -27,8 +30,9 @@ module.exports = {
   },
   variants: {},
   plugins: [styles.pluginFunction],
-}
+};
 ```
+
 The `styles.pluginFunction` will add the library styles as utilities to the rest of the Tailwind utilities.
 
 You can find more information about writing tailwind plugins [here](https://tailwindcss.com/docs/plugins).
@@ -49,14 +53,10 @@ Example inside the library:
 Using the classes above in your project:
 
 ```html
-<button class="ac-mb-1">
-  Test Button
-</button>
+<button class="ac-mb-1">Test Button</button>
 ```
 
-
 ## Development
-
 
 - Must be framework agnostic
 - No dependencies
@@ -68,7 +68,7 @@ To test if all the classes are properly included, run
 ```
 npm i
 npm run build
-node test/test.js
+npm run test
 ```
 
 This will console the list of classes available, in the near future a documentation with all the classes will be added.
