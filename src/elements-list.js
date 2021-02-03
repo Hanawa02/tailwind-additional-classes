@@ -10,24 +10,21 @@ const addPrefix = function (item) {
   const objectKeys = Object.keys(item);
   if (!objectKeys) return undefined;
 
-  return objectKeys.flatMap((key) => {
+  const prefixedObject = {};
+
+  for (const key of objectKeys) {
     const newKey = key.replace(/([.])/g, `.${prefix}-`);
-    return { [newKey]: item[key] };
-  });
+    prefixedObject[newKey] = item[key];
+  }
+  return prefixedObject;
 };
 
 const elements = {
-  heights: addPrefix(heights),
-  margins: addPrefix(margins),
-  paddings: addPrefix(paddings),
-  positions: addPrefix(positions),
-  widths: addPrefix(widths),
+  ...addPrefix(heights),
+  ...addPrefix(margins),
+  ...addPrefix(paddings),
+  ...addPrefix(positions),
+  ...addPrefix(widths),
 };
 
 module.exports.elements = elements;
-
-const elementList = function () {
-  return Object.values(elements).flat();
-};
-
-module.exports.elementList = elementList;
