@@ -9,6 +9,10 @@ const createWidths = () => {
     widthList.push({ id: `${index}`, value: `${index * 0.25}rem` });
   }
 
+  for (let index = 100; index <= 500; index++) {
+    widthList.push({ id: `${index}`, value: `${index * 0.25}rem` });
+  }
+
   let widths = {};
   for (const item of widthList) {
     const widthItem = {
