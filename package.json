@@ -5,7 +5,8 @@
   "main": "main.js",
   "scripts": {
     "build": "rollup -c",
-    "test": "node test/test.js && exit 0"
+    "test": "node test/test.js && exit 0",
+    "generateCss": "node test/generator.js && exit 0"
   },
   "repository": {
     "type": "git",

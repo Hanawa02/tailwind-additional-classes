@@ -1,4 +1,4 @@
-const helper = require("../helper");
+const helper = require("../../src/base-styles/helper");
 
 const createHeights = () => {
   const heightList = [{ id: "fit-content", value: "fit-content" }];
@@ -9,7 +9,7 @@ const createHeights = () => {
     heightList.push({ id: `${index}`, value: `${index * 0.25}rem` });
   }
 
-  for (let index = 100; index <= 320; index++) {
+  for (let index = 100; index <= 200; index++) {
     heightList.push({ id: `${index}`, value: `${index * 0.25}rem` });
   }
 
@@ -20,10 +20,10 @@ const createHeights = () => {
         ...helper.createAttribute("height", item.value),
       },
       [`.min-height-${item.id}`]: {
-        ...helper.createAttribute("minHeight", item.value),
+        ...helper.createAttribute("min-height", item.value),
       },
       [`.max-height-${item.id}`]: {
-        ...helper.createAttribute("maxHeight", item.value),
+        ...helper.createAttribute("max-height", item.value),
       },
     };
 

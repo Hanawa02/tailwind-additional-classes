@@ -3,7 +3,7 @@ const helper = require("../helper");
 const createPositions = () => {
   const positionList = [{ id: "0", value: "0" }];
 
-  for (let index = -100; index <= 100; index++) {
+  for (let index = -64; index <= 64; index++) {
     positionList.push({ id: index, value: `${index * 0.25}rem` });
     positionList.push({ id: `${index}p`, value: `${index}%` });
   }

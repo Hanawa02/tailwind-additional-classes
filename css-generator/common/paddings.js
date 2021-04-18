@@ -1,7 +1,7 @@
 const createPaddings = () => {
   const paddingList = [];
 
-  for (let index = 0; index <= 100; index++) {
+  for (let index = -100; index <= 100; index++) {
     paddingList.push({ id: `${index}`, value: `${index * 0.25}rem` });
     paddingList.push({ id: `${index}p`, value: `${index}%` });
   }
@@ -13,24 +13,24 @@ const createPaddings = () => {
         padding: item.value,
       },
       [`.px-${item.id}`]: {
-        paddingLeft: item.value,
-        paddingRight: item.value,
+        "padding-left": item.value,
+        "padding-right": item.value,
       },
       [`.py-${item.id}`]: {
-        paddingTop: item.value,
-        paddingBottom: item.value,
+        "padding-top": item.value,
+        "padding-bottom": item.value,
       },
       [`.pr-${item.id}`]: {
-        paddingRight: item.value,
+        "padding-right": item.value,
       },
       [`.pl-${item.id}`]: {
-        paddingLeft: item.value,
+        "padding-left": item.value,
       },
       [`.pt-${item.id}`]: {
-        paddingTop: item.value,
+        "padding-top": item.value,
       },
       [`.pb-${item.id}`]: {
-        paddingBottom: item.value,
+        "padding-bottom": item.value,
       },
     };
 
