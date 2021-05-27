@@ -5,6 +5,10 @@ function createAttribute(attribute, Attribute) {
   return { [`${attribute}`]: Attribute };
 }
 
+function createAttribute(attribute, Attribute) {
+  return { [`${attribute}`]: Attribute };
+}
+
 const colorList = [{id: "light-blue" , value: "#d2e0fe"},
 {id: "blue" , value: "#276afc"},
 {id: "dark-blue" , value: "#0342c9"},
@@ -15,11 +19,9 @@ const colorList = [{id: "light-blue" , value: "#d2e0fe"},
 {id: "white" , value: "#ffffff"},
 {id: "black" , value: "#000000"},]
 
-let colorAttributes = {};
-
 for (const item of colorList) {
   const colorItem = {
-    [`background-color-${item.id}`]: { ...createAttribute("background-color", item.value) },
+    [`background-color-${item.id}`]: { ...createAttributeBackgroundColor("background-color", item.value) },
     [`text-${item.id}`]: { ...createAttribute("color", item.value) },
     [`border-color-${item.id}`]: { ...createAttribute("border-color", item.value) },
     [`shadow-elevation-${item.id}`]: { ...createAttribute("box-shadow", `0px 0px 0.5rem 0.0625rem ${item.value} `) },
@@ -61,7 +63,7 @@ for (const item of Object.entries(elements)) {
 
 fs.writeFile(
   "./test/tailwindAdditionalClasses.css",
-  data.join(" ").replace(/([\{])/g, '\{\n').replace(/([\}])/g, '\}\n').replace(/([\;])/g, '\;\n'),
+  data.join(" ").replace(/([\{])/g, '\{\n').replace(/([\}])/g, ';\}\n').replace(/([\;])/g, '\;\n'),
   function (err) {
     if (err) throw err;
   }
